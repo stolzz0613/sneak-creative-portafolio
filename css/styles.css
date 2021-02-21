@@ -1,0 +1,106 @@
+body{
+    margin:0;
+}
+
+h1{
+    margin:0;
+    font-size: 25px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 10px;
+}
+
+p{
+    color: white;
+    font-size: 10px;
+    font-family: 'Questrial', sans-serif;
+    letter-spacing: 3px;
+}
+
+a{
+    font-size: 10px;
+    font-family: 'Questrial', sans-serif;
+    letter-spacing: 1px;
+}
+
+.navbar{
+    margin: 10px 150px 10px 150px;
+    display: flex;
+}
+
+.navbar__logo{
+    width:10%
+}
+
+.navbar__list {
+    display:flex;
+    flex-basis: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    align-items: center;
+    margin-left: auto;
+    max-width: 500px;
+}
+
+.navbar__item{
+    flex: 1 1 0;
+    margin-right: 10px;
+    padding: 5px 0 5px 0;
+    text-align: center;
+}
+
+.navbar__item a{
+    color: gray;
+    text-align: center;
+    text-decoration: none;
+}
+
+.navbar__item:hover, .navbar__item:hover > a {
+    color:white;
+    background-color:#EF708B;
+    cursor: pointer;
+}
+
+.navbar__icon{
+    margin-left: 20px;
+    text-align: center;
+    color: #EF708B;
+    cursor: pointer;
+}
+
+.header{
+    position: relative;
+    text-align: center;
+    background-image:linear-gradient(
+        rgb(239, 112, 139, 0.7),
+        rgb(239, 112, 139, 0.7)
+      ), url("https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80");
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+}
+.header__content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header__text{
+    margin: 25px 0 25px 0;
+}
+
+.header__button{
+    margin-top: 15px;
+    padding: 10px 20px 10px 20px;
+    background-color: white;
+    color: #EF708B;
+    font-size: 8px;
+    font-family: 'Questrial', sans-serif;
+    border: none;
+    letter-spacing: 1px;
+}
+
