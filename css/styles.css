@@ -40,7 +40,8 @@ ul{
 }
 
 .navbar__logo{
-    width:100px
+    width:100px;
+    height: 50px;
 }
 
 .navbar__list {
