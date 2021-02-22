@@ -43,9 +43,9 @@ ul {
   display: flex;
 }
 
-.navbar .navbar__logo {
-  width: 150px;
-  height: 50px;
+.navbar__logo{
+    width:100px;
+    height: 50px;
 }
 
 .navbar .navbar__list {
