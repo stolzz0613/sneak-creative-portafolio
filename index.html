@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel='stylesheet' href='./css/styles.css'>
     <link rel="preconnect" href="https://fonts.gstatic.com"> 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Questrial&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="./js/getImages.js"></script>
+    <script type="text/javascript" src="./js/changeView.js"></script>
+    <script type="text/javascript" src="./js/handleSearchs.js"></script>
+
     <title>Technical Interview TITA MEDIA</title>
 </head>
 <body>
@@ -15,22 +21,22 @@
     <div class='navbar'>
         <img class='navbar__logo' src='./assets/logo.png' alt='logo'>
         <ul class='navbar__list'>
-            <li class='navbar__item'>
+            <li onclick='search("all")' class='navbar__item'>
                 <a>All</a>
             </li>
-            <li class='navbar__item'>
+            <li onclick='search("branding")' class='navbar__item'>
                 <a>Branding</a>
             </li>
-            <li class='navbar__item'>
+            <li onclick='search("web")' class='navbar__item'>
                 <a>Web</a>
             </li>
-            <li class='navbar__item'>
+            <li onclick='search("photography")' class='navbar__item'>
                 <a>Photography</a>
             </li>
-            <li class='navbar__item'>
+            <li onclick='search("app")' class='navbar__item'>
                 <a>App</a>
             </li>
-            <i class='navbar__icon fa fa-search'></i>
+            <i class='navbar__icon bi bi-search'></i>
         </ul>
     </div> 
     <!-- Header Element-->
@@ -43,6 +49,36 @@
             </div>
             <button class='header__button'>VIEW OUR WORK</button>
         </div>
+    </div>
+    <!-- Secondaries NavBars Elements-->
+    <div class='gridNavBar'>
+        <div class='gridNavBar__icons'>
+            <i class='navbar__icon bi bi-grid-fill' onclick='changeView(3)'></i>
+            <i class='navbar__icon bi bi-distribute-vertical' onclick='changeView(1)'></i>
+        </div>
+        <div class='gridNavBar__menuContainer'>
+            <ul class='gridNavBar__menu'>
+                <li onclick='search("all")' class='navbar__item'>
+                    <a>All</a>
+                </li>
+                <li onclick='search("branding")' class='navbar__item'>
+                    <a>Branding</a>
+                </li>
+                <li onclick='search("web")' class='navbar__item'>
+                    <a>Web</a>
+                </li>
+                <li onclick='search("photography")' class='navbar__item'>
+                    <a>Photography</a>
+                </li>
+                <li onclick='search("app")' class='navbar__item'>
+                    <a>App</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Grid -->
+    <div id='grid'>
+
     </div>
 </body>
 </html>
