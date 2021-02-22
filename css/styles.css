@@ -95,6 +95,10 @@ ul{
     color: white;
 }
 
+.navbar__icon--hamburger{
+    visibility: hidden;
+}
+
 .navbar__icon--search{
     margin: 0;
     border: none;
@@ -143,7 +147,7 @@ ul{
 }
 
 .gridNavBar__menuContainer{
-    width: 30%;
+    width: 35%;
     margin: 50px auto;
 }
 
@@ -165,16 +169,6 @@ ul{
 .grid__image{
     padding: 5px;
     margin: 0 0 5px;
-}
-
-@media (max-width: 600px) {
-    #grid {
-        column-count: 1;
-    }
-    .grid__image{
-        padding: 0;
-        margin: 0;
-    }
 }
 
 .footer{
@@ -209,5 +203,70 @@ ul{
     font-size: 10px;
     color: rgb(189, 182, 182);
     margin: 15px 10px 0px 0px;
+}
+
+@media (max-width: 500px) {
+    .navbar ul{
+        display:block;
+        flex-basis: 100%;
+        overflow: hidden;
+    }
+
+    .navbar{
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar__icon--hamburger{
+        visibility: visible;
+        font-size: 20px;
+        color: #EF708B;
+    }
+
+    .navbar__icon{
+        margin: 0;
+    }
+
+    .navbar__list{
+		right:100%;
+        top: 0%;
+		margin: 0;
+        padding: 0 0 15px 0;
+		position: fixed;
+        background-color: white;
+        z-index: 2;
+        text-align: center;
+        height:fit-content;
+    }
+
+    .navbar__item{
+        padding: 20px;
+    }
+
+    .gridNavBar__icons{
+        display: none;
+    }
+
+    .gridNavBar__menuContainer{
+        margin: 0;
+        width: 100%;
+    }
+
+    .gridNavBar__menu{
+        padding: 0;
+    }
+
+    .gridNavBar__menuContainer li{
+        margin: 0;
+        padding: 0;
+    }
+
+    #grid {
+        column-count: 1;
+    }
+    .grid__image{
+        padding: 0;
+        margin: 0;
+    }
 }
 

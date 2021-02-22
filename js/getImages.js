@@ -34,7 +34,6 @@ const generateImages = (data) => {
 
 function handleError(action){
     var errorText = document.getElementById('errorText');
-    console.log(action)
     if (action == 'show'){
         errorText.removeAttribute('hidden');
     } else {

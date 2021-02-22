@@ -15,6 +15,7 @@
     <script type="text/javascript" src="./js/changeView.js"></script>
     <script type="text/javascript" src="./js/handleSearchs.js"></script>
     <script type="text/javascript" src="./js/handleSearchBar.js"></script>
+    <script type="text/javascript" src="./js/menuHandler.js"></script>
 
     <title>Technical Interview TITA MEDIA</title>
 </head>
@@ -22,7 +23,8 @@
     <!-- NavBar Element-->
     <div class='navbar' id='navbar'>
         <img class='navbar__logo' src='./assets/logo.png' alt='logo'>
-        <ul class='navbar__list'>
+        <i id='mobile-icon' class="navbar__icon--hamburger fa fa-bars" onclick='activateMenu()'></i>
+        <ul class='navbar__list' id='navbar-list'>
             <li onclick='search("all")' class='navbar__item'>
                 <a>All</a>
             </li>
@@ -99,7 +101,7 @@
     </div>
     <!-- Footer -->
     <div class='footer'>
-        <button class='footer__button'>SHOW ME MORE</button>
+        <button class='footer__button' onclick='getImages("");'>SHOW ME MORE</button>
         <p class='footer--text'>&#169 2016 - <span class='footer--span'>Sneak</span> All Right Reserved</p>
         <div class='footer__icons'>
             <i class="fa fa-facebook"></i>
