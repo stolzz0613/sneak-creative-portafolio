@@ -13,12 +13,13 @@
     <script type="text/javascript" src="./js/getImages.js"></script>
     <script type="text/javascript" src="./js/changeView.js"></script>
     <script type="text/javascript" src="./js/handleSearchs.js"></script>
+    <script type="text/javascript" src="./js/handleSearchBar.js"></script>
 
     <title>Technical Interview TITA MEDIA</title>
 </head>
 <body>
     <!-- NavBar Element-->
-    <div class='navbar'>
+    <div class='navbar' id='navbar'>
         <img class='navbar__logo' src='./assets/logo.png' alt='logo'>
         <ul class='navbar__list'>
             <li onclick='search("all")' class='navbar__item'>
@@ -36,9 +37,22 @@
             <li onclick='search("app")' class='navbar__item'>
                 <a>App</a>
             </li>
-            <i class='navbar__icon bi bi-search'></i>
+            <i onclick='handleSearchBar()' class='navbar__icon bi bi-search'></i>
         </ul>
     </div> 
+
+    <!-- Search Bar Element-->
+    <div class='searchBar' id='search' state='false' hidden>
+        <form onsubmit='makeSearch(event)'>
+            <input class='searchBar__input' placeholder='Type a word' type='text' id='term'>
+            <input 
+                class='navbar__icon navbar__icon--search'
+                type='submit'
+                id='send'
+            >
+        </form>
+    </div>
+
     <!-- Header Element-->
     <div class='header'>
         <div class='header__content'>
@@ -79,6 +93,9 @@
     <!-- Grid -->
     <div id='grid'>
 
+    </div>
+    <div id='errorText' hidden>
+        <h1 class='grid__error'>There are not results <br> for your search</h1>
     </div>
 </body>
 </html>

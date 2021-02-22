@@ -8,21 +8,40 @@ const getImages = async(term) => {
             return data
         });
     } else {
-        console.log('There was an error trying to get the images')
+        let data=[]
+        generateImages(data, term)
+        console.log('There was an error trying to get the images');
     }
-}
+};
 
 const generateImages = (data) => {
     document.getElementById('grid').innerHTML = '';
-    for (let i = 0; i < data.length; i++){
-        var div = document.createElement('div');
-        var image = document.createElement('img');
-        image.src = data[i].urls.thumb;
-        div.classList.add('grid__image');
-        div.appendChild(image);
-        document.getElementById('grid').appendChild(div);
+    if (data.length != 0){
+        handleError('hide');
+        for (let i = 0; i < data.length; i++){
+            var div = document.createElement('div');
+            var image = document.createElement('img');
+            image.src = data[i].urls.thumb;
+            div.classList.add('grid__image');
+            div.appendChild(image);
+            document.getElementById('grid').appendChild(div);
+        }
+    } else {
+        handleError('show');
     }
-}
+
+    document.getElementById('grid').scrollIntoView();
+};
+
+function handleError(action){
+    var errorText = document.getElementById('errorText');
+    console.log(action)
+    if (action == 'show'){
+        errorText.removeAttribute('hidden');
+    } else {
+        errorText.setAttribute('hidden', '');
+    }
+};
 
 window.onload = function(){
     getImages('');

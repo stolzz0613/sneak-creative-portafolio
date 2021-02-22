@@ -2,6 +2,10 @@ body{
     margin:0;
 }
 
+[hidden] {
+    display: none !important;
+}
+
 h1{
     margin:0;
     font-size: 25px;
@@ -31,7 +35,7 @@ ul{
 }
 
 .navbar{
-    margin: 10px 10% 10px 10%;
+    margin: 10px 10% 0 10%;
     display: flex;
 }
 
@@ -73,9 +77,35 @@ ul{
     cursor: pointer;
 }
 
+.searchBar{
+    margin-right: 10%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.searchBar__input{
+    border: none;
+    background-color: #EF708B;
+    color: white;
+    font-family: 'Questrial', sans-serif;
+    letter-spacing: 1px;
+}
+
+.searchBar__input::placeholder{
+    color: white;
+}
+
+.navbar__icon--search{
+    margin: 0;
+    border: none;
+    background-color: white;
+}
+
+
 .header{
     position: relative;
     text-align: center;
+    margin-top: 10px;
     background-image:linear-gradient(
         rgb(239, 112, 139, 0.7),
         rgb(239, 112, 139, 0.7)
@@ -127,8 +157,12 @@ ul{
     will-change: opacity;
 }
 
+.grid__error{
+    color: #EF708B;
+    text-align: center;
+}
+
 .grid__image{
-    background: #fff;
     padding: 5px;
     margin: 0 0 5px;
 }
