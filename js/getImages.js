@@ -10,7 +10,6 @@ const getImages = async(term) => {
     } else {
         let data=[]
         generateImages(data, term)
-        console.log('There was an error trying to get the images');
     }
 };
 

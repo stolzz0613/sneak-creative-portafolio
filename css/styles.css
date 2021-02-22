@@ -1,5 +1,5 @@
 body{
-    margin:0;
+    margin:0 0 50px;
 }
 
 [hidden] {
@@ -176,3 +176,38 @@ ul{
         margin: 0;
     }
 }
+
+.footer{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.footer__button{
+    padding: 10px 20px 10px 20px;
+    margin-bottom: 30px;
+    background-color: #EF708B;
+    color: white;
+    font-size: 8px;
+    font-family: 'Questrial', sans-serif;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.footer--text{
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(189, 182, 182);
+    margin-bottom: 15px;
+}
+
+.footer--span{
+    color: #EF708B;
+}
+
+.footer__icons > i{
+    font-size: 10px;
+    color: rgb(189, 182, 182);
+    margin: 15px 10px 0px 0px;
+}
+
